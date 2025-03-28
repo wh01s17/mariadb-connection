@@ -7,7 +7,7 @@ router.post('/api/users', async (request, response) => {
     const { name, email } = request.body
 
     if (!name || !email) {
-        return res.status(400).json({ message: 'Parameters are missing' })
+        return response.status(400).json({ message: 'Parameters are missing' })
     }
 
     try {
